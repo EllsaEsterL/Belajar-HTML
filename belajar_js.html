@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="judul">Belajar JavaScript</h1>
+<p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quis quos cum quibusdam ad quod placeat nesciunt velit modi, veniam autem dolore aspernatur a iste, sunt ipsum laboriosam molestiae obcaecati!</p>
+<button id="tombol" onclick="changetext()">click me</button>
+<button onclick="showalert()">Simpan</button> <br> <br>
+<img id="clickimage" src="logo_1.jpg" width="100" height="100" onclick="clickimage()"> <hr>
+<h1>Form data siswa</h1> 
+<input id="nama" type="text" placeholder="Nama" style="width: 50%;"> <br> <br>
+<input id="nomor_hp" type="text" placeholder="Nomor HP"> <br> <br>
+<textarea id="alamat" placeholder="Alamat" rows="5" cols="30"></textarea> <br>
+<button onclick="simpandata()">Simpan</button>
+<script>
+document.getElementById("judul").innerHTML ="Belajar Jawavscript mantap";
+function changetext(){ 
+    alert("sentana");
+    document.getElementById("tombol").innerHTML ="Clicked" ;
+    document.getElementById("paragraph").innerHTML ="Belajar javascript merupakan dasar membuat website yang interaktif" ;
+}
+function showalert(){
+    alert("berhasil disimpan");
+    console.log("excuted");
+}
+function simpandata(){
+    // document.getElementById("nama").value ;
+    var nama = document.getElementById("nama").value;
+    if(nama==""){
+        alert("Nama Tidak Boleh Kosong");
+        return false;
+    }
+    var nomor_hp = document.getElementById("nomor_hp").value;
+    var alamat= document.getElementById("alamat").value;
+    alert("nama anda: "+nama+", nomorhp: "+nomor_hp+", alamat: "+alamat);
+    document.getElementById("nama").value = "pacitan";
+}
+/* function clickimage() {
+    alert("gambar logo");
+    document.getElementById("clickimage").style.display ="none";
+    document.getElementById("paragraph").style.color ="red" ;
+    console.log("merah");
+} */
+    // alert("SIAP");
+</script>
+</body>
+</html>
