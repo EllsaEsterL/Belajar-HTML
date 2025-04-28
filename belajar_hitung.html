@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input1" type="number" placeholder="input 1">
+    <p>+</p>
+    <input id="input2" type="number" placeholder="input 2"> <br> <br>
+    <button id="myBtnhitung">Hitung</button>
+    <h4 id="hasil">Hasil=0</h4>
+    <script>
+        document.getElementById("myBtnhitung").addEventListener("click",fungsihitung)
+        function fungsihitung(){
+            // alert("test");
+            var input1 = document.getElementById("input1").value;
+            // alert("input1 "+ input1);
+            var input2 = document.getElementById("input2").value;
+            // alert("input1 + input2 "+input1 +"+"+ input2);
+            var hasil = parseInt(input1) + parseInt(input2);
+            // alert("hasil = "+hasil)
+            document.getElementById("hasil").innerHTML ="Hasil = "+hasil;
+        }
+    </script>
+</body>
+</html>

@@ -16,6 +16,8 @@
 <input id="nomor_hp" type="text" placeholder="Nomor HP"> <br> <br>
 <textarea id="alamat" placeholder="Alamat" rows="5" cols="30"></textarea> <br>
 <button onclick="simpandata()">Simpan</button>
+<button id="myBtnprint">Print</button>
+<button id="myBtnalert">Alert</button>
 <script>
 document.getElementById("judul").innerHTML ="Belajar Jawavscript mantap";
 function changetext(){ 
@@ -39,6 +41,19 @@ function simpandata(){
     alert("nama anda: "+nama+", nomorhp: "+nomor_hp+", alamat: "+alamat);
     document.getElementById("nama").value = "pacitan";
 }
+document.getElementById("myBtnalert").addEventListener("click",showalert)
+function showalert(){
+    alert("Halo") ;
+}
+document.getElementById("myBtnprint").addEventListener("click",showprint);
+function showprint(){
+    window.print();
+}
+    
+
+// function print() {
+//     alert("Hallo") ;
+// }
 /* function clickimage() {
     alert("gambar logo");
     document.getElementById("clickimage").style.display ="none";
